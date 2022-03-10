@@ -1,0 +1,38 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 110px;
+}
+
+.directory-menu {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.collection-page {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 160%;
+
+  display: flex;
+  align-items: center;
+
+  color: #1d1f22;
+}
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.collection-item {
+  margin-bottom: 30px;
+  padding: 40px;
+}

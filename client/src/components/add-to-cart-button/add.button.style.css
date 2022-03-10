@@ -1,0 +1,12 @@
+.custom-button {
+  width: 70%;
+  max-width: 200px;
+  opacity: 0.9;
+  position: absolute;
+  top: 260px;
+  border-radius: 10px;
+  background-color: white;
+}
+.custom-button:hover {
+  background-color: rgb(243, 242, 242);
+}

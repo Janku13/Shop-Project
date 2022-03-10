@@ -1,0 +1,25 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+}
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.option {
+  cursor: pointer;
+}
+
+.price-drop {
+  font-size: 13px;
+  background: #fff;
+  background: white;
+  border: none;
+  outline: 0px;
+}
+.cart-price-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: end;
+}
