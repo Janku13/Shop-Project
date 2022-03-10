@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { GET_CATEGORIES } from '../../gql_query/data-query';
 import ChoosePrice from '../price_drop_list/price.dropList.component';
-import './header.style.css';
 import CartLogo from '../cart-icon/cart-icon';
+import bagLogo from '../../assets/bag-icon.png';
 import CartDropDown from '../cart-drop-down/cart.dropDown';
-import { toggleCartState } from '../../redux/cart/cart.action';
+import './header.style.css';
 
-const Header = ({ toggleCartState, showCart, cartItemsList }) => {
+const Header = ({ showCart }) => {
   let navigate = useNavigate();
   const { error, loading, data } = useQuery(GET_CATEGORIES);
   if (loading) {
@@ -28,13 +28,17 @@ const Header = ({ toggleCartState, showCart, cartItemsList }) => {
       </p>
     );
   });
+
   return (
-    <div className="header">
+    <div className=" site-header">
       <div className="options">{option} </div>
+      <div>
+        <img className="bag-logo" src={bagLogo} alt="" />
+      </div>
       <div className="cart-price-container">
         <ChoosePrice />
-        <CartLogo toggleCartStatus={toggleCartState} />
-        {showCart ? <CartDropDown cartItemsList={cartItemsList} /> : ''}
+        <CartLogo />
+        {showCart ? <CartDropDown /> : ''}
       </div>
     </div>
   );
@@ -42,10 +46,6 @@ const Header = ({ toggleCartState, showCart, cartItemsList }) => {
 
 const mapStateToProps = (state) => ({
   showCart: state.cart.showCart,
-  cartItemsList: state.cart.cartItemsList,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleCartState: () => dispatch(toggleCartState()),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);

@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import { GET_CURRENCIES } from '../../gql_query/data-query';
 import { chooseCurrency } from '../../redux/currency/currency.action';
 
-function ChoosePrice({ handleCurrencyChange, currency }) {
+const ChoosePrice = ({ handleCurrencyChange, currency }) => {
   const { category } = useParams();
   const isTitle = category ? category : 'all';
 
@@ -33,7 +33,7 @@ function ChoosePrice({ handleCurrencyChange, currency }) {
       </select>
     </div>
   );
-}
+};
 const mapStateToProps = (state) => ({
   currency: state.showCurrency.currency,
 });
