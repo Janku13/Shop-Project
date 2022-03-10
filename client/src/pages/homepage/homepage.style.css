@@ -21,16 +21,15 @@
   font-weight: normal;
   font-size: 42px;
   line-height: 160%;
-
   display: flex;
   align-items: center;
-
   color: #1d1f22;
 }
 .items {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .collection-item {
   margin-bottom: 30px;

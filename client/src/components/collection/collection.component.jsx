@@ -5,7 +5,7 @@ import AddToCartButton from '../add-to-cart-button/add.to.cart.button';
 // import CollectionItem from '../collection-item/collection-item.component';
 import './collection.styles.css';
 
-function CollectionPage({ product, currency, addToCart }) {
+function CollectionPage({ product, currency }) {
   const isAvailable = product.inStock;
   const navigate = useNavigate();
   const styles = {
@@ -36,7 +36,9 @@ function CollectionPage({ product, currency, addToCart }) {
           {findingCurrency[0].amount}{' '}
         </p>
       </div>
-      <AddToCartButton isAvailable={isAvailable} item={product} />
+      <div className="add-item-button">
+        <AddToCartButton isAvailable={isAvailable} item={product} />
+      </div>
     </div>
   );
 }
