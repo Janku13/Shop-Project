@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import './add.button.style.css';
 import { addItem } from '../../redux/cart/cart.action';
 
-function AddToCartButton({ isAvailable, addItem, item }) {
+function AddToCartButton({ isAvailable, addItem, item, productDetails }) {
   return (
     <button
       disabled={!isAvailable}
-      className={`custom-button`}
+      className={productDetails ? 'detail-button' : 'custom-button'}
       onClick={() => addItem(item)}
     >
       Add To Cart

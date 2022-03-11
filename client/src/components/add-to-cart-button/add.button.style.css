@@ -3,7 +3,8 @@
   max-width: 200px;
   opacity: 0.9;
   position: absolute;
-  top: 240px;
+  top: 300px;
+  left: 50px;
   background-color: white;
 
   min-width: 165px;
@@ -13,8 +14,6 @@
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: black;
-  color: white;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
   font-weight: bolder;
@@ -27,6 +26,33 @@
   border: 1px solid black;
 }
 .custom-button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+.detail-button {
+  width: 70%;
+  max-width: 200px;
+  opacity: 0.9;
+  background-color: white;
+  min-width: 165px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #5ece7b;
+  color: white;
+  border: 1px solid black;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+}
+.detail-button:hover {
   background-color: black;
   color: white;
   border: 1px solid white;

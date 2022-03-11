@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import store from './redux/store';

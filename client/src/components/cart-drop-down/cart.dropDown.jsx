@@ -7,6 +7,7 @@ import './cart-dropdown.styles.css';
 class CartDropDown extends Component {
   render() {
     const cartItemsList = this.props.cartItemsList;
+    const numberOfItems = cartItemsList.length;
     const cartItems = cartItemsList.map((item) => {
       return <CartItems key={item.id} item={item} />;
     });
@@ -15,14 +16,22 @@ class CartDropDown extends Component {
       <div className="cart-dropdown">
         <div className="cart-items">
           {cartItems.length > 0 ? (
-            cartItems
+            <div className="cart-items-container">
+              <span>My Bag, {numberOfItems} items</span>
+              {cartItems}
+            </div>
           ) : (
             <span className="empty-message">Your Cart is Empty</span>
           )}
         </div>
-        <Link className="option" to="/checkout">
-          <button>GO TO CHECKOUT</button>
-        </Link>
+        <div className="checkout-button-container">
+          <Link className="option" to="/checkout">
+            <button className="check-out-button">VIEW BAG</button>
+          </Link>
+          <Link className="option" to="/checkout">
+            <button className="check-out-button">CHECK OUT</button>
+          </Link>
+        </div>
       </div>
     );
   }

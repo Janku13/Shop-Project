@@ -1,18 +1,18 @@
 .cart-dropdown {
   position: absolute;
-  width: 240px;
-  height: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
   border: 1px solid black;
   background-color: white;
-  top: 90px;
-  right: 40px;
   z-index: 5;
+  width: 400px;
+  height: 500px;
+  left: 900px;
+  top: 100px;
 }
 .cart-items {
-  height: 240px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   overflow: scroll;
@@ -21,6 +21,30 @@
   font-size: 18px;
   margin: 50px auto;
 }
-button {
-  margin-top: auto;
+.check-out-button {
+  width: 100%;
+  max-width: 200px;
+  opacity: 0.9;
+  background-color: white;
+
+  height: 50px;
+
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #5ece7b;
+  color: white;
+  border: 1px solid black;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+}
+.checkout-button-container {
+  display: flex;
+}
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }

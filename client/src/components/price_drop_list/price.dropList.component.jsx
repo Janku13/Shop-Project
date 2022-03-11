@@ -14,10 +14,10 @@ const ChoosePrice = ({ handleCurrencyChange, currency }) => {
     return <p>Loading</p>;
   }
   if (error) return <p>Error :(</p>;
-  // console.log(data.currencies);
+
   const chooseOption = data.currencies.map((currency) => {
     return (
-      <option value={currency.label}>
+      <option key={currency.label} value={currency.label}>
         {currency.symbol} {currency.label}
       </option>
     );
