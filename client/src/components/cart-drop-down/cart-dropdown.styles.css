@@ -2,7 +2,7 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 5px 5px 30px;
   border: 1px solid black;
   background-color: white;
   z-index: 5;
@@ -12,9 +12,10 @@
   top: 100px;
 }
 .cart-items {
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
+  text-align: left;
   overflow: scroll;
 }
 .empty-message {
@@ -22,8 +23,8 @@
   margin: 50px auto;
 }
 .check-out-button {
-  width: 100%;
-  max-width: 200px;
+  width: 150px;
+  cursor: pointer;
   opacity: 0.9;
   background-color: white;
 
@@ -47,4 +48,36 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+}
+.cart-total-price {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.total {
+  font-weight: 600;
+  font-size: 28px;
+  color: #1d1f22;
+}
+.my-bag-text {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  /* identical to box height, or 26px */
+
+  text-align: right;
+
+  color: #1d1f22;
+}
+.cart-header-text {
+  margin-bottom: 10px;
+}
+.total-price-number {
+  font-weight: 500;
+  font-size: 28px;
+  color: #1d1f22;
 }
